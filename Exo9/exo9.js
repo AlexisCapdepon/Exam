@@ -1,0 +1,2 @@
+'use stric'
+alert('ok');
