@@ -6,7 +6,7 @@ function move() {
     var id = setInterval(frame, 10);
     function frame() {
         if (width >= 100) {
-            clearInterval(id);
+            clearInterval(test);
         } else {
             width++; 
             elem.style.width = width + '%'; 
@@ -15,6 +15,6 @@ function move() {
 }
 var drawBar = function(sum,nbr){
 	var progBar = document.querySelector('.myBar');
-	var width
+	
 
 }
