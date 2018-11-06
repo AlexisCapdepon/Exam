@@ -13,8 +13,4 @@ function move() {
         }
     }
 }
-var drawBar = function(sum,nbr){
-	var progBar = document.querySelector('.myBar');
-	
-
-}
+move();
