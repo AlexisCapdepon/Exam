@@ -13,9 +13,19 @@ path.addEventListener('mouseenter',function(){
    return;
   }
   path.setAttribute('style', 'fill:blue');
+  messageLegend(path.id);
   
 });
 
 });
 }
 renderWorldMap();
+
+function messageLegend(value){
+  var elMsgContent = document.querySelector('#legend');
+  var dom = '';
+  dom += '<div>';
+  dom += '<label>'+value+'</label>';
+  dom += '</div>';
+  elMsgContent.innerHTML = dom;
+}  
