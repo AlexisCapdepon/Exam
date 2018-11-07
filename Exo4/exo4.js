@@ -9,14 +9,23 @@ path.setAttribute('style', 'fill:red');
 });
 
 path.addEventListener('mouseenter',function(){
+  messageLegend(path.id);
   if (path.style.fill == 'red'){
    return;
   }
   path.setAttribute('style', 'fill:blue');
-  messageLegend(path.id);
+  
   
 });
 
+path.addEventListener('mouseleave',function(){
+  if (path.style.fill == 'red'){
+   return;
+  }
+  path.setAttribute('style', 'fill:black');
+  messageLegend(path.id);
+  
+});
 });
 }
 renderWorldMap();
