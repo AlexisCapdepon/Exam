@@ -1,21 +1,17 @@
 'use strict'
 
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 0;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
+function drawBar(sum, nbr) {
+  var progression = document.querySelector('.bar-progression');
+  if (nbr>sum){
+    alert('vous essayez avec un nombre invalide');
+    progression.style.width = 0 + '%' ;
+    return ;
   }
+ 
+  var width = nbr / sum * 100;
+  progression.style.width = width + '%';
 }
-var drawBar = function(sum,nbr){
 
-
-}
+//drawBar(365, 73);
+drawBar(250, 14);
+//drawBar(365, 365);
